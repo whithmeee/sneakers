@@ -1,13 +1,12 @@
 .items {
     margin-left: 19rem;
     display: flex;
-    flex-wrap: wrap;
     padding-top: 100px;
 }
 .item {
-    max-width: 350px;
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
     margin-bottom: 35px;
 }
 
@@ -19,6 +18,7 @@
 
 .item-content > h5 {
     margin-top: 10px;
+    width: 320px;
 }
 
 .item-price {

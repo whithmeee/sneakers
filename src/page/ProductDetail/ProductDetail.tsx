@@ -5,13 +5,16 @@ import Loader from "../../components/loader/Loader";
 import Button from "../../components/UI/Button/Button";
 import styles from "./ProductDetail.module.css";
 import ProductAccardion from "./ProductAccardion";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cart.slice";
+import { AppDispatch } from "../../redux/store";
 
 export interface ProductDetail {
     id: number;
     title: string;
     desctiption: string;
     images: string[];
-    price: string;
+    price: number;
     size: number[];
     color: string;
     country: string;
@@ -24,10 +27,19 @@ const ProductDetail = () => {
     const [productDetail, setProductDetail] = useState<ProductDetail | null>(
         null
     );
-
     const [activeImage, setActiveImage] = useState(0);
+    const dispatch = useDispatch<AppDispatch>();
 
-    console.log(activeImage);
+    const handleAddToCart = () => {
+        dispatch(
+            addToCart({
+                id: productDetail?.id,
+                title: productDetail?.title,
+                image: productDetail?.images[0],
+                price: productDetail?.price,
+            })
+        );
+    };
 
     const getProductDetail = async () => {
         try {
@@ -81,7 +93,11 @@ const ProductDetail = () => {
                 </div>
                 <p>Цена: {productDetail.price} ₽</p>
 
-                <Button appearance="small" children={"В корзину"} />
+                <Button
+                    onClick={handleAddToCart}
+                    appearance="small"
+                    children={"В корзину"}
+                />
 
                 <ProductAccardion productDetail={productDetail} />
             </div>

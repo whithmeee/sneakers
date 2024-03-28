@@ -1,0 +1,17 @@
+.empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 200px;
+}
+
+.empty > p {
+    width: 700px;
+}
+
+.empty-buttons {
+    display: flex;
+    gap: 15px;
+}

@@ -17,12 +17,10 @@
 }
 .big {
     font-size: 20px;
-    width: 250px;
     padding: 0 30px;
 }
 
 .small {
-    width: 100px;
     font-size: 12px;
     background-color: #261919;
     color: #ffffff;

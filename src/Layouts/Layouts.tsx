@@ -23,7 +23,7 @@ const Layouts = () => {
                                 [styles["active"]]: isActive === true,
                             })
                         }
-                        to={"/main"}
+                        to={"/"}
                     >
                         Обувь
                     </NavLink>

@@ -31,7 +31,7 @@ const Main = () => {
     }, []);
 
     return (
-        <>
+        <div className={styles["items-content"]}>
             <div className={styles["items"]}>
                 <div className={styles["item"]}>
                     {products.length > 0 ? (
@@ -58,7 +58,7 @@ const Main = () => {
                     )}
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
