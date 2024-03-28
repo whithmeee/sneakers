@@ -1,0 +1,74 @@
+.layouts-content {
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    margin-left: 20px;
+}
+
+.content {
+    margin-left: 150px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: baseline;
+    margin-top: 50px;
+}
+
+.profile > img {
+    width: 80px;
+    height: 80px;
+}
+
+.profile > p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+    margin-top: 15px;
+}
+
+.profile > span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #9ea1b1;
+}
+
+.links-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.links {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.active {
+    color: red;
+}
+
+.exit {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.exit > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}

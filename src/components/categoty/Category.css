@@ -1,0 +1,21 @@
+.category {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.category-item {
+    text-transform: uppercase;
+}
+
+.active {
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: #000000;
+    border-radius: 30px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
