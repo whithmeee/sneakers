@@ -5,10 +5,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layouts from "./Layouts/Layouts";
 import Main from "./page/Main/Main";
 import Cart from "./page/Cart/Cart";
+import ThanksOrder from "./page/Order/ThanksOrder";
 import ProductDetail from "./page/ProductDetail/ProductDetail";
 import { Provider } from "react-redux";
-import store from "./redux/store";
-import ThanksOrder from "./page/order/ThanksOrder";
+import store from "./redux/store"; //////
 
 const router = createBrowserRouter([
     {

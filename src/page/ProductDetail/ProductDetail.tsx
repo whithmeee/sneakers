@@ -66,42 +66,44 @@ const ProductDetail = () => {
     }
 
     return (
-        <div className={styles["product-detail"]}>
-            <div className={styles["main-img"]}>
-                <img src={productDetail.images[activeImage]} alt="" />
-                <div className={styles["product-images"]}>
-                    {productDetail.images.map((img, index) => (
-                        <img
-                            key={index}
-                            onClick={() => handleClickActiveImage(index)}
-                            src={img}
-                            alt=""
-                        />
-                    ))}
-                </div>
-            </div>
-            <div className={styles["product-content"]}>
-                <h2>{productDetail.title}</h2>
-
-                <div className={styles["product-size"]}>
-                    <select className={styles["select"]}>
-                        <option value="">Размер: </option>
-                        {productDetail.size.map((sizes) => (
-                            <option key={sizes}>{sizes}</option>
+        <>
+            <div className={styles["product-detail"]}>
+                <div className={styles["main-img"]}>
+                    <img src={productDetail.images[activeImage]} alt="" />
+                    <div className={styles["product-images"]}>
+                        {productDetail.images.map((img, index) => (
+                            <img
+                                key={index}
+                                onClick={() => handleClickActiveImage(index)}
+                                src={img}
+                                alt=""
+                            />
                         ))}
-                    </select>
+                    </div>
                 </div>
-                <p>Цена: {productDetail.price} ₽</p>
+                <div className={styles["product-content"]}>
+                    <h2>{productDetail.title}</h2>
 
-                <Button
-                    onClick={handleAddToCart}
-                    appearance="small"
-                    children={"В корзину"}
-                />
+                    <div className={styles["product-size"]}>
+                        <select className={styles["select"]}>
+                            <option value="">Размер: </option>
+                            {productDetail.size.map((sizes) => (
+                                <option key={sizes}>{sizes}</option>
+                            ))}
+                        </select>
+                    </div>
+                    <p>Цена: {productDetail.price} ₽</p>
 
-                <ProductAccardion productDetail={productDetail} />
+                    <Button
+                        onClick={handleAddToCart}
+                        appearance="small"
+                        children={"В корзину"}
+                    />
+
+                    <ProductAccardion productDetail={productDetail} />
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

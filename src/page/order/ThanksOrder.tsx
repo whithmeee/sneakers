@@ -1,7 +1,7 @@
-import styles from "./ThanksOrder.module.css";
+import { Link } from "react-router-dom";
 import orderImg from "../../../public/order.jpg";
 import Button from "../../components/UI/Button/Button";
-import { Link } from "react-router-dom";
+import styles from "./ThanksOrder.module.css";
 
 const ThanksOrder = () => {
     return (

@@ -6,11 +6,6 @@ interface ContentLoader {
 }
 const MyLoader = (props: ContentLoader) => (
     <ContentLoader
-        style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-        }}
         speed={0.5}
         width={271}
         height={540}
@@ -26,7 +21,7 @@ const MyLoader = (props: ContentLoader) => (
         <rect x="227" y="431" rx="0" ry="0" width="19" height="2" />
         <rect x="105" y="157" rx="0" ry="0" width="0" height="44" />
         <circle cx="133" cy="155" r="122" />
-        <rect x="178" y="227" rx="0" ry="0" width="0" height="1" />
+        <rect x="200" y="227" rx="0" ry="0" width="0" height="1" />
         <rect x="11" y="299" rx="5" ry="5" width="263" height="14" />
     </ContentLoader>
 );
