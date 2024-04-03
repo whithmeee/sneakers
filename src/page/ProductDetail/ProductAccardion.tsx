@@ -1,14 +1,19 @@
 import { useRef, useState } from "react";
 import styles from "./ProductDetail.module.css";
 import { IoIosArrowDown } from "react-icons/io";
-import { ProductDetail } from "./ProductDetail";
 import { IoIosArrowUp } from "react-icons/io";
 
-interface ProductAccardion {
-    productDetail: ProductDetail;
+interface AccardionProps {
+    id: number;
+    name: string;
+    desctiption: string;
+    country: string;
+    color: string;
+    floor: string;
+    compound: string[];
 }
 
-const ProductAccardion = ({ productDetail }: ProductAccardion) => {
+const ProductAccardion = (props: AccardionProps) => {
     const [accardionId, setAccardionId] = useState<number | null>(null);
     const ref = useRef<HTMLElement | null>(null);
 
@@ -21,24 +26,20 @@ const ProductAccardion = ({ productDetail }: ProductAccardion) => {
         {
             id: 0,
             name: "Описание",
-            description: `${productDetail?.desctiption}`,
+            desctiption: props?.desctiption,
         },
         {
             id: 1,
             name: "Характеристики",
             description: [
+                <p style={{ marginBottom: "10px" }}>Пол: {props.floor}</p>,
+                <p style={{ marginBottom: "10px" }}>Цвет: {props.color}</p>,
                 <p style={{ marginBottom: "10px" }}>
-                    Пол: {productDetail?.floor}
-                </p>,
-                <p style={{ marginBottom: "10px" }}>
-                    Цвет: {productDetail?.color}
-                </p>,
-                <p style={{ marginBottom: "10px" }}>
-                    Страна: {productDetail?.country}
+                    Страна: {props?.country}
                 </p>,
                 <p>
                     Состав:
-                    {productDetail?.compound.map((comp, index: number) => (
+                    {props?.compound.map((comp, index: number) => (
                         <span key={index}> {String(comp).split(",")}</span>
                     ))}
                 </p>,
@@ -69,6 +70,7 @@ const ProductAccardion = ({ productDetail }: ProductAccardion) => {
             ],
         },
     ];
+
     return (
         <div className={styles["product-accordions"]}>
             {TABS_ELEMENT.map((tab, id) => (
@@ -115,7 +117,7 @@ const ProductAccardion = ({ productDetail }: ProductAccardion) => {
                                         ))}
                                     </ul>
                                 ) : (
-                                    tab.description
+                                    tab.desctiption
                                 )}
                             </div>
                         </div>

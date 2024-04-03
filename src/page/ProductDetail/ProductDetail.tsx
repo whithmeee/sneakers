@@ -27,8 +27,17 @@ const ProductDetail = () => {
     const [productDetail, setProductDetail] = useState<ProductDetail | null>(
         null
     );
+
     const [activeImage, setActiveImage] = useState(0);
     const dispatch = useDispatch<AppDispatch>();
+
+    const [activeSize, setActiveSize] = useState<number | null>(null);
+
+    const handleActiveSize = (index: number) => {
+        setActiveSize(index);
+    };
+
+    const size = activeSize !== null ? productDetail?.size[activeSize] : null;
 
     const handleAddToCart = () => {
         dispatch(
@@ -36,6 +45,7 @@ const ProductDetail = () => {
                 id: productDetail?.id,
                 title: productDetail?.title,
                 image: productDetail?.images[0],
+                size: size,
                 price: productDetail?.price,
             })
         );
@@ -71,7 +81,7 @@ const ProductDetail = () => {
                 <div className={styles["main-img"]}>
                     <img src={productDetail.images[activeImage]} alt="" />
                     <div className={styles["product-images"]}>
-                        {productDetail.images.map((img, index) => (
+                        {productDetail.images?.map((img, index) => (
                             <img
                                 key={index}
                                 onClick={() => handleClickActiveImage(index)}
@@ -85,14 +95,31 @@ const ProductDetail = () => {
                     <h2>{productDetail.title}</h2>
 
                     <div className={styles["product-size"]}>
-                        <select className={styles["select"]}>
-                            <option value="">Размер: </option>
-                            {productDetail.size.map((sizes) => (
-                                <option key={sizes}>{sizes}</option>
+                        Размеры
+                        <ul>
+                            {productDetail.size.map((size, index) => (
+                                <li key={index}>
+                                    <button
+                                        onClick={() => handleActiveSize(index)}
+                                        className={
+                                            styles[
+                                                `${
+                                                    activeSize === index
+                                                        ? "active"
+                                                        : ""
+                                                }`
+                                            ]
+                                        }
+                                    >
+                                        {size}
+                                    </button>
+                                </li>
                             ))}
-                        </select>
+                        </ul>
                     </div>
-                    <p>Цена: {productDetail.price} ₽</p>
+                    <p className={styles["product-price"]}>
+                        Цена: {productDetail.price} ₽
+                    </p>
 
                     <Button
                         onClick={handleAddToCart}
@@ -100,7 +127,15 @@ const ProductDetail = () => {
                         children={"В корзину"}
                     />
 
-                    <ProductAccardion productDetail={productDetail} />
+                    <ProductAccardion
+                        id={productDetail.id}
+                        name={productDetail.title}
+                        country={productDetail.country}
+                        compound={productDetail.compound}
+                        color={productDetail.color}
+                        desctiption={productDetail?.desctiption}
+                        floor={productDetail.floor}
+                    />
                 </div>
             </div>
         </>

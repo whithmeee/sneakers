@@ -14,7 +14,7 @@ const Empty = () => {
             </p>
 
             <div className={styles["empty-buttons"]}>
-                <Link to={"/"}>
+                <Link to={"/login"}>
                     <Button children={"Войти"} />
                 </Link>
                 <Link to={"/"}>

@@ -1,10 +1,14 @@
 .cart {
-    margin-left: 350px;
+    margin-left: 19rem;
     padding-top: 60px;
     display: flex;
     gap: 50px;
 }
 
+.cart-main-title {
+    margin-left: 19rem;
+    padding-top: 50px;
+}
 .cart-item {
     display: flex;
     flex-direction: column;
@@ -43,6 +47,47 @@
     font-weight: bold;
     margin-bottom: 10px;
 }
+
+.cart-size {
+    margin-bottom: 10px;
+}
+
+.cart-count {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.cart-content > button {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.cart-count > button {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.cart-count > button:active {
+    transform: translateY(-2px);
+}
+
+.cart-count > button > svg {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-count > span {
+    font-size: 20px;
+    font-weight: 400;
+    background-color: transparent;
+    font-style: normal;
+}
+
 .cart-content > h3 {
     font-size: 15px;
     font-weight: normal;
@@ -119,6 +164,7 @@
     gap: 10px;
     margin-bottom: 30px;
     margin-top: 30px;
+    margin-top: 10px;
 }
 
 .form-email > label {
@@ -162,6 +208,25 @@
 }
 
 .form-phone > label {
+    padding-bottom: 0.5625rem;
+    display: block;
+    color: #000;
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    -webkit-letter-spacing: 0.08em;
+    -moz-letter-spacing: 0.08em;
+    -ms-letter-spacing: 0.08em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.form-city {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.form-city > label {
     padding-bottom: 0.5625rem;
     display: block;
     color: #000;

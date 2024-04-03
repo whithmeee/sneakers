@@ -13,7 +13,6 @@
 body {
     margin: 0 auto;
     place-items: center;
-    min-height: 100vh;
 }
 
 h1 {

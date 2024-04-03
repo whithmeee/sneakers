@@ -1,39 +1,31 @@
-.items {
+.cloth {
     margin-left: 19rem;
-    display: flex;
-    padding-top: 30px;
-}
-
-.items-title {
-    margin-left: 19rem;
-    display: flex;
     padding-top: 50px;
-    justify-content: space-between;
 }
 
-.items-title > input {
-    margin-right: 8rem;
+.cloth-items {
+    margin-top: 50px;
 }
 
-.item {
+.cloth-item {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
     margin-bottom: 35px;
 }
 
-.item-img > img {
+.cloth-img > img {
     width: 295px;
     height: 293px;
     object-fit: cover;
 }
 
-.item-content > h5 {
+.cloth-content > h5 {
     margin-top: 10px;
     width: 320px;
 }
 
-.item-price {
+.cloth-price {
     opacity: 1;
     color: #000;
     font-weight: 700;
@@ -43,7 +35,7 @@
     margin-top: 10px;
 }
 
-.links {
+.cloth-links {
     text-decoration: none;
     color: #000;
 }

@@ -3,8 +3,13 @@ import { IoExitOutline } from "react-icons/io5";
 import styles from "./Layouts.module.css";
 import cn from "classnames";
 import Button from "../components/UI/Button/Button";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 const Layouts = () => {
+    const items = useSelector((s: RootState) => s.cart.cart);
+
+    console.log(items);
     return (
         <div className={styles["layouts"]}>
             <div className={styles["layouts-content"]}>
@@ -17,6 +22,28 @@ const Layouts = () => {
                     <span>shpinev13@mail.ru</span>
                 </div>
                 <div className={styles["links-menu"]}>
+                    <NavLink
+                        className={({ isActive }) =>
+                            cn(styles["links"], {
+                                [styles["active"]]: isActive === true,
+                            })
+                        }
+                        to={"/purchases"}
+                    >
+                        Мои покупки
+                    </NavLink>
+
+                    <NavLink
+                        className={({ isActive }) =>
+                            cn(styles["links"], {
+                                [styles["active"]]: isActive === true,
+                            })
+                        }
+                        to={"/cloth"}
+                    >
+                        Одежда
+                    </NavLink>
+
                     <NavLink
                         className={({ isActive }) =>
                             cn(styles["links"], {
@@ -36,6 +63,9 @@ const Layouts = () => {
                         to={"/cart"}
                     >
                         Корзина
+                        <span className={styles["items-count"]}>
+                            {items.length}
+                        </span>
                     </NavLink>
                 </div>
 
