@@ -8,7 +8,7 @@ import Cart from "./page/Cart/Cart";
 import ThanksOrder from "./page/Order/ThanksOrder";
 import ProductDetail from "./page/ProductDetail/ProductDetail";
 import { Provider } from "react-redux";
-import store from "./redux/store"; //////
+import store from "./redux/store";
 import Purchases from "./page/Purchases/Purchases";
 import Cloth from "./page/Cloth/Cloth";
 import ClothDetail from "./page/ClothDetail/ClothDetail";
