@@ -1,0 +1,14 @@
+.order {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 200px;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.order > img {
+    width: 350px;
+    height: 350px;
+}

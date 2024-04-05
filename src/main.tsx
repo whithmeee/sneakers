@@ -13,6 +13,7 @@ import Purchases from "./page/Purchases/Purchases";
 import Login from "./page/Auth/Login/Login";
 import Register from "./page/Auth/Register/Register";
 import "./index.css";
+import Order from "./page/Order/Order";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
             {
                 path: "productChothDetail/:id",
                 element: <ClothDetail />,
+            },
+            {
+                path: "/order",
+                element: <Order />,
             },
             {
                 path: "/purchases",
