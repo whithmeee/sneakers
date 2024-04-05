@@ -9,7 +9,6 @@ import Cloth from "./page/Cloth/Cloth";
 import Cart from "./page/Cart/Cart";
 import ProductDetail from "./page/ProductDetail/ProductDetail";
 import ClothDetail from "./page/ClothDetail/ClothDetail";
-// import ThanksOrder from "./page/Order/ThanksOrder";
 import Purchases from "./page/Purchases/Purchases";
 import Login from "./page/Auth/Login/Login";
 import Register from "./page/Auth/Register/Register";
@@ -40,10 +39,6 @@ const router = createBrowserRouter([
                 path: "productChothDetail/:id",
                 element: <ClothDetail />,
             },
-            // {
-            //     path: "/order",
-            //     element: <ThanksOrder />,
-            // },
             {
                 path: "/purchases",
                 element: <Purchases />,
