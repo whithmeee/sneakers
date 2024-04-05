@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import store from "./redux/store";
 import Layouts from "./Layouts/Layouts";
 import Main from "./page/Main/Main";
 import Cloth from "./page/Cloth/Cloth";
@@ -10,9 +13,6 @@ import ThanksOrder from "./page/Order/ThanksOrder";
 import Purchases from "./page/Purchases/Purchases";
 import Login from "./page/Auth/Login/Login";
 import Register from "./page/Auth/Register/Register";
-import { Provider } from "react-redux";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import store from "./redux/store";
 import "./index.css";
 
 const router = createBrowserRouter([
