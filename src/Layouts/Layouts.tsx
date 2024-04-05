@@ -8,8 +8,6 @@ import { RootState } from "../redux/store";
 
 const Layouts = () => {
     const items = useSelector((s: RootState) => s.cart.cart);
-
-    console.log(items);
     return (
         <div className={styles["layouts"]}>
             <div className={styles["layouts-content"]}>
