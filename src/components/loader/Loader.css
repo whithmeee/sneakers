@@ -1,10 +1,6 @@
 .lds-roller {
-    display: flex;
-    position: relative;
-    height: 80px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 25rem;
+    padding-left: 32rem;
+    padding-top: 17rem;
 }
 .lds-roller div {
     animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;

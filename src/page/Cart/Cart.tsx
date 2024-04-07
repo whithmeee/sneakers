@@ -134,16 +134,14 @@ const Cart = () => {
             name: name,
             phone: phone,
             city: city,
-            item: items,
+            items,
             totalPrice: totalPrice,
         };
 
         try {
             const respone = await axios.post(
                 "https://b20e349e3a741b9b.mokky.dev/orders",
-                {
-                    formData,
-                }
+                formData
             );
 
             if (respone.status === 201) {

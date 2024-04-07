@@ -14,6 +14,7 @@ import Login from "./page/Auth/Login/Login";
 import Register from "./page/Auth/Register/Register";
 import "./index.css";
 import Order from "./page/Order/Order";
+import RequirAuth from "./helpers/RequirAuth";
 
 const router = createBrowserRouter([
     {
@@ -46,7 +47,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "/purchases",
-                element: <Purchases />,
+                element: (
+                    <RequirAuth>
+                        <Purchases />
+                    </RequirAuth>
+                ),
             },
         ],
     },

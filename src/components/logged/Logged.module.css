@@ -1,0 +1,14 @@
+.logged {
+    display: flex;
+    padding-left: 19rem;
+    padding-top: 19rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logged-links {
+    display: flex;
+    gap: 20px;
+}
