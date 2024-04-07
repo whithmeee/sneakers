@@ -33,6 +33,7 @@ export interface CartProduct {
 
 const Cart = () => {
     const items = useSelector((s: RootState) => s.cart.cart);
+    const userID = useSelector((s: RootState) => s.user.profile?.id);
     const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate();
     const [name, setName] = useState("");
@@ -130,6 +131,7 @@ const Cart = () => {
     const handleSubmitOrder = async (event: FormEvent) => {
         event.preventDefault();
         const formData = {
+            userId: userID,
             email: email,
             name: name,
             phone: phone,

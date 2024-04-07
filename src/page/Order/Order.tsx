@@ -9,8 +9,8 @@ const Order = () => {
             <h2>Ваш заказ успешно оформлен!</h2>
             <img src={orderImg} alt="order-img" />
 
-            <Link to={"/"}>
-                <Button children="На главную" />
+            <Link to={"/purchases"}>
+                <Button children="Мои покупки" />
             </Link>
         </div>
     );

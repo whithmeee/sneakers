@@ -15,7 +15,7 @@ const Purchases = () => {
     const handleCartPurchase = async () => {
         try {
             const { data } = await axios.get(
-                `https://b20e349e3a741b9b.mokky.dev/orders?id=${userID}`
+                `https://b20e349e3a741b9b.mokky.dev/orders?userId=${userID}`
             );
             if (Array.isArray(data) && data.length > 0) {
                 const items = data.map((order) => order.items).flat();
@@ -26,16 +26,17 @@ const Purchases = () => {
             setLoading(false);
         } catch (error) {
             console.log(error);
-            setLoading(false);
         }
     };
 
     useEffect(() => {
         handleCartPurchase();
-    }, []);
+    }, [userID]);
+
     return (
         <div className={styles["purchases"]}>
             <h2>Мои покупки</h2>
+
             {loading ? (
                 <Loader />
             ) : (

@@ -5,7 +5,7 @@ import Button from "../UI/Button/Button";
 const Logged = () => {
     return (
         <div className={styles["logged"]}>
-            <h1>Вы не авторизовались на сайте</h1>
+            <h2>Вы не авторизовались на сайте</h2>
 
             <p>Для просмотра истории покупок вам необходимо авторизоваться.</p>
             <div className={styles["logged-links"]}>
