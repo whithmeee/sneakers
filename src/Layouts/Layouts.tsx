@@ -26,6 +26,15 @@ const Layouts = () => {
     return (
         <div className={styles["layouts"]}>
             <div className={styles["layouts-content"]}>
+                <div className={styles["layouts-logo"]}>
+                    <Link to={"/"}>
+                        <img
+                            src="https://i.pinimg.com/originals/61/bd/74/61bd741cf8e5e34bb6411434919d0209.png"
+                            alt="logo"
+                        />
+                        <h2>React-Sneakers</h2>
+                    </Link>
+                </div>
                 {token ? (
                     <div key={profileUser?.id} className={styles["profile"]}>
                         <img

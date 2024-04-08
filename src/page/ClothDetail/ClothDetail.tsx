@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import ProductAccardion from "../ProductDetail/ProductAccardion";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cart.slice";
+import Modal from "../../components/UI/Modal/Modal";
 
 interface ClothDetail {
     id: number;
@@ -26,6 +27,8 @@ const ClothDetail = () => {
     const [activeSize, setActiveSize] = useState<number | null>(null);
 
     const size = activeSize !== null ? clothDetail?.size[activeSize] : null;
+
+    const [isOpen, setIsOpen] = useState(false);
 
     const dispatch = useDispatch();
     const { id } = useParams();
@@ -55,10 +58,15 @@ const ClothDetail = () => {
                 price: clothDetail?.price,
             })
         );
+        setIsOpen(true);
     };
 
     const handleActiveSize = (index: number) => {
         setActiveSize(index);
+    };
+
+    const closeModal = () => {
+        setIsOpen(false);
     };
     return (
         <>
@@ -119,6 +127,12 @@ const ClothDetail = () => {
                     </div>
                 </div>
             )}
+
+            <Modal
+                isOpen={isOpen}
+                closeModal={closeModal}
+                children={`${clothDetail?.title}`}
+            />
         </>
     );
 };

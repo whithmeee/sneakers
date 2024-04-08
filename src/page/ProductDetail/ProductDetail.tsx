@@ -8,6 +8,7 @@ import ProductAccardion from "./ProductAccardion";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cart.slice";
 import { AppDispatch } from "../../redux/store";
+import Modal from "../../components/UI/Modal/Modal";
 
 export interface ProductDetail {
     id: number;
@@ -28,6 +29,7 @@ const ProductDetail = () => {
         null
     );
 
+    const [isOpen, setIsOpen] = useState(false);
     const [activeImage, setActiveImage] = useState(0);
     const dispatch = useDispatch<AppDispatch>();
 
@@ -49,6 +51,7 @@ const ProductDetail = () => {
                 price: productDetail?.price,
             })
         );
+        setIsOpen(true);
     };
 
     const getProductDetail = async () => {
@@ -74,6 +77,10 @@ const ProductDetail = () => {
     if (!productDetail) {
         return <Loader />;
     }
+
+    const closeModal = () => {
+        setIsOpen(false);
+    };
 
     return (
         <>
@@ -138,6 +145,12 @@ const ProductDetail = () => {
                     />
                 </div>
             </div>
+
+            <Modal
+                children={`${productDetail.title}`}
+                isOpen={isOpen}
+                closeModal={closeModal}
+            />
         </>
     );
 };

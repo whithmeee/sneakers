@@ -101,3 +101,20 @@
     top: -10px;
     border-radius: 20px;
 }
+
+.layouts-logo {
+    padding-top: 30px;
+}
+
+.layouts-logo > a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.layouts-logo > a > img {
+    width: 50px;
+    height: 50px;
+}
