@@ -44,6 +44,9 @@ const Login = () => {
         <div className={styles["login"]}>
             <div className={styles["login-content"]}>
                 <div className={styles["login-img"]}>
+                    <Link to={"/"}>
+                        <Button children={"Вернуться в магазин"} />
+                    </Link>
                     <img src={loginImg} alt="login" />
                 </div>
 

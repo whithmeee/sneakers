@@ -2,7 +2,7 @@ import { ButtonProps } from "../../../interface/button.interface";
 import cn from "classnames";
 import styles from "./Button.module.css";
 
-const Button = ({ appearance, children, ...props }: ButtonProps) => {
+const Button = ({ appearance = "small", children, ...props }: ButtonProps) => {
     return (
         <button
             {...props}

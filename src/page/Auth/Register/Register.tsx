@@ -51,6 +51,9 @@ const Register = () => {
         <div className={styles["register"]}>
             <div className={styles["register-content"]}>
                 <div className={styles["register-img"]}>
+                    <Link to={"/"}>
+                        <Button children={"Вернуться в магазин"} />
+                    </Link>
                     <img src={register} alt="register" />
                 </div>
                 <form

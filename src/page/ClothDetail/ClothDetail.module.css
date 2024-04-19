@@ -5,6 +5,12 @@
     padding-top: 150px;
 }
 
+.cloth-main-img {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 .cloth-main-img > img {
     width: 440px;
     height: 400px;

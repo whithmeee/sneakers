@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Button from "../../components/UI/Button/Button";
 import styles from "./ClothDetail.module.css";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ProductAccardion from "../ProductDetail/ProductAccardion";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cart.slice";
@@ -73,6 +73,9 @@ const ClothDetail = () => {
             {clothDetail && (
                 <div className={styles["cloth-detail"]}>
                     <div className={styles["cloth-main-img"]}>
+                        <Link to={"/cloth"}>
+                            <Button children={"Вернуться назад"} />
+                        </Link>
                         <img src={clothDetail.image} alt="" />
                     </div>
                     <div className={styles["cloth-content"]}>

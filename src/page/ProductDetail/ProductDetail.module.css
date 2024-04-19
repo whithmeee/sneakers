@@ -5,6 +5,12 @@
     padding-top: 150px;
 }
 
+.main-img {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 .main-img > img {
     width: 440px;
     height: 400px;
