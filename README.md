@@ -1,4 +1,4 @@
-# React + TypeScript + Redux + Vite
+# React-Sneakers
 
 1. Приложение для оформление одежды и обуви.
 2. Более детально можно ознакомиться с сайтом по ссылке: https://react-sneakers-shop.netlify.app/
