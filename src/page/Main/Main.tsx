@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import Input from "../../components/UI/Input/Input";
 import { useFetch } from "../../hooks/useFetch";
 import { useSearch } from "../../hooks/useSearch";
-import { SelectAutoWidth } from "../../components/UI/Select/Select";
-import { useState } from "react";
 
 export interface ApiResponse {
   items: ProductProps[];
@@ -15,10 +13,9 @@ export interface ApiResponse {
 
 const Main = () => {
   const { search, handleSearch } = useSearch();
-  const [price, setPrice] = useState("");
 
   const { data } = useFetch(
-    `https://b20e349e3a741b9b.mokky.dev/items?title=*${search}&sortBy=-${price}`
+    `https://b20e349e3a741b9b.mokky.dev/items?title=*${search}`
   );
 
   return (
@@ -28,9 +25,7 @@ const Main = () => {
         <Input onChange={handleSearch} placeholder="Поиск..." />
       </div>
 
-      <div className={styles["items-sort"]}>
-        <SelectAutoWidth price={price} />
-      </div>
+      <div className={styles["items-sort"]}></div>
       <div className={styles["items"]}>
         <div className={styles["item"]}>
           {data?.length > 0 ? (

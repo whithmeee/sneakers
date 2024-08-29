@@ -24,7 +24,7 @@ const Cloth = () => {
     <div className={styles["cloth"]}>
       <div className={styles["cloth-title"]}>
         <h2>Одежда</h2>
-        <Input onChange={handleSearch} placeholder="Поиск..." />
+        <Input type="text" onChange={handleSearch} placeholder="Поиск..." />
       </div>
 
       <div className={styles["cloth-items"]}>

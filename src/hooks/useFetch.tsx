@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { ProductProps } from "../interface/product.interface";
 import { Cloth } from "../page/Cloth/Cloth";
 
-export const useFetch = (url: string) => {
+export const useFetch = (url: string, userID?: number) => {
   const [data, setData] = useState<ProductProps[] | Cloth[] | any>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
@@ -23,7 +23,7 @@ export const useFetch = (url: string) => {
 
   useEffect(() => {
     getFetch();
-  }, [url]);
+  }, [url, userID]);
 
   return { data, loading, error };
 };

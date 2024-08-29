@@ -1,59 +1,64 @@
 .register {
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
 }
 
 .register-content {
-    display: flex;
-    gap: 30px;
-    align-items: center;
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
 .register-img > img {
-    width: 550px;
-    height: 550px;
-    object-fit: cover;
-    display: flex;
-    flex-direction: column;
+  width: 550px;
+  height: 550px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
 }
 
 .register-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .register-form > div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .register-form > div > label {
-    font-weight: bold;
-    font-size: 1.0625rem;
-    line-height: normal;
-    color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  font-size: 1.0625rem;
+  line-height: normal;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .register-form > div > input {
-    margin-top: 10px;
-    width: 600px;
+  margin-top: 10px;
+  width: 600px;
 }
 
 .register-buttom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .register-buttom > a {
-    color: #4d29ff;
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: #4d29ff;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .register-buttom > button {
-    width: 80%;
+  width: 80%;
+}
+
+.error {
+  font-size: 15px;
+  color: tomato;
 }
