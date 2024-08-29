@@ -1,41 +1,51 @@
 .cloth {
-    margin-left: 19rem;
-    padding-top: 50px;
+  margin-left: 19rem;
+}
+
+.cloth-title {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cloth-title > input {
+  margin-right: 8rem;
 }
 
 .cloth-items {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .cloth-item {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 35px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
 }
 
 .cloth-img > img {
-    width: 295px;
-    height: 293px;
-    object-fit: cover;
+  width: 295px;
+  height: 293px;
+  object-fit: cover;
 }
 
 .cloth-content > h5 {
-    margin-top: 10px;
-    width: 320px;
+  margin-top: 10px;
+  width: 320px;
 }
 
 .cloth-price {
-    opacity: 1;
-    color: #000;
-    font-weight: 700;
-    font-size: 1.0625rem;
-    line-height: 1.0625rem;
-    transition: opacity 0.2s ease;
-    margin-top: 10px;
+  opacity: 1;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  line-height: 1.0625rem;
+  transition: opacity 0.2s ease;
+  margin-top: 10px;
 }
 
 .cloth-links {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
