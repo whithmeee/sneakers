@@ -22,7 +22,7 @@ const Main = () => {
     <div className={styles["items-content"]}>
       <div className={styles["items-title"]}>
         <h2>Обувь</h2>
-        <Input onChange={handleSearch} placeholder="Поиск..." />
+        <Input type="text" onChange={handleSearch} placeholder="Поиск..." />
       </div>
 
       <div className={styles["items-sort"]}></div>

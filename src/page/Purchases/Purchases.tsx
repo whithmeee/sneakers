@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import styles from "./Purchases.module.css";
-import axios from "axios";
 import { CartProduct } from "../Cart/Cart";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
