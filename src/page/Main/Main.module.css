@@ -47,9 +47,3 @@
   text-decoration: none;
   color: #000;
 }
-
-.items-sort {
-  display: flex;
-  justify-content: end;
-  margin-right: 8rem;
-}

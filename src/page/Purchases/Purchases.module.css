@@ -1,58 +1,63 @@
 .purchases {
-    margin-left: 19rem;
-    padding-top: 50px;
+  margin-left: 19rem;
+  padding-top: 50px;
 }
 
 .purchases-item {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 35px;
-    padding-top: 20px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+  padding-top: 20px;
 }
 
 .purchases-img > img {
-    width: 295px;
-    height: 293px;
-    object-fit: cover;
+  width: 295px;
+  height: 293px;
+  object-fit: cover;
 }
 
 .purchases-content > h5 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 320px;
-    font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 320px;
+  font-size: 18px;
 }
 
 .purchases-count {
-    opacity: 1;
-    color: rgb(0, 0, 0, 0.3);
-    font-weight: 700;
-    font-size: 1.0625rem;
-    line-height: 1.0625rem;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  opacity: 1;
+  color: rgb(0, 0, 0, 0.3);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  line-height: 1.0625rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .purchases-price {
-    opacity: 1;
-    color: #000;
-    font-weight: 700;
-    font-size: 1.0625rem;
-    line-height: 1.0625rem;
-    transition: opacity 0.2s ease;
-    margin-top: 10px;
+  opacity: 1;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  line-height: 1.0625rem;
+  transition: opacity 0.2s ease;
+  margin-top: 10px;
 }
 
 .nopurchases {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding-top: 100px;
 }
 
 .nopurchases > img {
-    width: 450px;
-    height: 450px;
+  width: 450px;
+  height: 450px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
 }

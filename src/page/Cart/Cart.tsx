@@ -6,6 +6,7 @@ import {
   clearCart,
   decrementToCart,
   removeToCart,
+  setCart,
 } from "../../redux/cart.slice";
 import { useNavigate } from "react-router-dom";
 import styles from "./Cart.module.css";
@@ -14,6 +15,8 @@ import Empty from "../../components/empty/Empty";
 
 import Form from "../../components/form/Form";
 import { Inputs } from "../../interface/form.interface";
+import { useEffect, useState } from "react";
+import Loader from "../../components/loader/Loader";
 
 export interface CartProduct {
   id: number;
@@ -28,10 +31,32 @@ export interface CartProduct {
 const Cart = () => {
   const items = useSelector((s: RootState) => s.cart.cart);
   const userID = useSelector((s: RootState) => s.user.profile?.id);
+  const [loading, setLoading] = useState(true);
 
-  console.log(userID);
+  console.log(items);
+
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedCartItems = localStorage.getItem("cartItems");
+    if (storedCartItems) {
+      const parsedItems: CartProduct[] = JSON.parse(storedCartItems);
+      dispatch(setCart(parsedItems));
+
+      if (items.length === 0) {
+        dispatch(setCart(parsedItems));
+      }
+    }
+
+    setLoading(false);
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (items.length > 0) {
+      localStorage.setItem("cartItems", JSON.stringify(items));
+    }
+  }, [items]);
 
   const totalPrice = items.reduce((acc, item) => {
     return (acc += item.count * item.price);
@@ -39,6 +64,7 @@ const Cart = () => {
 
   const handleRemoveToCart = (id: number) => {
     dispatch(removeToCart(id));
+    localStorage.removeItem("cartItems");
   };
 
   const handleIncrementCount = (id: number) => {
@@ -73,6 +99,10 @@ const Cart = () => {
       console.log(error);
     }
   };
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div>
