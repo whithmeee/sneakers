@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cart.slice";
 import { AppDispatch } from "../../redux/store";
 import Modal from "../../components/UI/Modal/Modal";
+import Recommend from "../../components/recommend/Recommend";
 
 export interface ProductDetail {
   id: number;
@@ -149,6 +150,11 @@ const ProductDetail = () => {
         children={`${productDetail.title}`}
         isOpen={isOpen}
         closeModal={closeModal}
+      />
+
+      <Recommend
+        fetchUrl="https://b20e349e3a741b9b.mokky.dev/items"
+        currentProductId={productDetail.id}
       />
     </>
   );

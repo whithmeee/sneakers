@@ -34,17 +34,6 @@ const ClothDetail = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
 
-  const getClothDetail = async () => {
-    try {
-      const { data } = await axios.get<ClothDetail>(
-        `https://b20e349e3a741b9b.mokky.dev/cloth/${id}`
-      );
-      setClothDetail(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
     getClothDetail();
   }, [id]);
@@ -61,6 +50,17 @@ const ClothDetail = () => {
       })
     );
     setIsOpen(true);
+  };
+
+  const getClothDetail = async () => {
+    try {
+      const { data } = await axios.get<ClothDetail>(
+        `https://b20e349e3a741b9b.mokky.dev/cloth/${id}`
+      );
+      setClothDetail(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleActiveSize = (index: number) => {

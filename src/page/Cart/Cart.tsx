@@ -30,10 +30,9 @@ export interface CartProduct {
 
 const Cart = () => {
   const items = useSelector((s: RootState) => s.cart.cart);
+
   const userID = useSelector((s: RootState) => s.user.profile?.id);
   const [loading, setLoading] = useState(true);
-
-  console.log(items);
 
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
